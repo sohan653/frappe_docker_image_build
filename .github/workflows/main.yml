@@ -34,7 +34,6 @@ jobs:
 
       - name: Build and Push Frappe Docker Image
         run: |
-          cd frappe_docker
           docker buildx build \
             --no-cache \
             --platform linux/amd64 \

@@ -29,11 +29,18 @@ jobs:
 
       - name: Set APPS_JSON
         run: |
-          echo "APPS_JSON=${{ secrets.ADIST_APP_JSON }}" >> $GITHUB_ENV
-          echo "APPS_JSON_BASE64=$(echo '${{ secrets.APPS_JSON }}' | base64 -w 0)" >> $GITHUB_ENV
+          # Temporary hardcoded version for testing
+          APPS_JSON='[{"url":"https://github.com/frappe/erpnext","branch":"v14.60.1"},{"url":"https://github.com/frappe/hrms.git","branch":"v14.21.0"},{"url":"https://gitlab.com/excel.azmin/whitelabel.git","branch":"main"},{"url":"https://github.com/Excel-Technologies-Ltd/Adist.git","branch":"main"},{"url":"https://github.com/Excel-Technologies-Ltd/Fastrack.git","branch":"main"}]'
+          echo "APPS_JSON=$APPS_JSON" >> $GITHUB_ENV
+          echo "APPS_JSON_BASE64=$(echo -n '$APPS_JSON' | base64 -w 0)" >> $GITHUB_ENV
+
+          # Debug output
+          echo "APPS_JSON: $APPS_JSON"
+          echo "Base64 length: $(echo -n '$APPS_JSON' | base64 -w 0 | wc -c)"
 
       - name: Build and Push Frappe Docker Image
         run: |
+          cd frappe_docker
           docker buildx build \
             --no-cache \
             --platform linux/amd64 \

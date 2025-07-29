@@ -44,10 +44,6 @@ jobs:
             {
             "url": "https://github.com/Excel-Technologies-Ltd/Adist.git",
             "branch": "main"
-            },
-            {
-            "url": "https://github.com/Excel-Technologies-Ltd/Fastrack.git",
-            "branch": "main"
             }
             
           ]
@@ -63,6 +59,6 @@ jobs:
           --build-arg PYTHON_VERSION=3.11.9 \
           --build-arg NODE_VERSION=18.20.2 \
           --build-arg APPS_JSON_BASE64="$APPS_JSON_BASE64" \
-          --tag arcapps/ftcl_adist:dev-test \
+          --tag arcapps/adist:1.0.0 \
           --file images/custom/Containerfile \
           --push .

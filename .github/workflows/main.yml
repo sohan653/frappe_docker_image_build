@@ -34,7 +34,7 @@ jobs:
             "branch": "version-15"
             },
             {
-            "url": "https://CapteIOT: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@github.com/CapteIOT/CapteERP.git",
+            "url": "https://github.com/sohan653/capte_erp.git",
             "branch": "master"
             }   
           ]

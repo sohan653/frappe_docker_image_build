@@ -59,7 +59,7 @@ jobs:
             },
             {
                 "url": "https://gitlab.com/arcapps/excel_meeting_booking.git",
-                "branch": "master"
+                "branch": "third-party-integration"
             },
             {
                 "url": "https://gitlab.com/arcapps/excel_restaurant_pos.git",

@@ -35,7 +35,7 @@ jobs:
              },
              {
              "url": "https://github.com/frappe/hrms.git",
-             "branch": "v14.21.0"
+             "branch": "v14.36.8"
              },
              {
              "url": "https://gitlab.com/excel.azmin/whitelabel.git",

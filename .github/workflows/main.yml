@@ -31,7 +31,7 @@ jobs:
           export APPS_JSON='[
              {
              "url": "https://github.com/frappe/erpnext",
-             "branch": "v14.60.1"
+             "branch": "v14.83.4"
              },
              {
              "url": "https://github.com/frappe/hrms.git",
@@ -59,7 +59,7 @@ jobs:
           --no-cache \
           --platform linux/amd64 \
            --build-arg FRAPPE_PATH=https://github.com/frappe/frappe \
-           --build-arg FRAPPE_BRANCH=v14.64.0 \
+           --build-arg FRAPPE_BRANCH=v14.95.0 \
            --build-arg PYTHON_VERSION=3.11.9 \
            --build-arg NODE_VERSION=20.19.0 \
            --build-arg APPS_JSON_BASE64="$APPS_JSON_BASE64" \

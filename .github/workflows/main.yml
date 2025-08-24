@@ -56,5 +56,3 @@ jobs:
           --tag arcapps/epic-erp:1.0.2 \
           --file images/custom/Containerfile \
           --push .
-
-          --push .

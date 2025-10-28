@@ -38,7 +38,7 @@ jobs:
             "branch": "version-14"
             },
             {
-            "url": "https://gitlab.com/arcapps/excel_hr.git",
+            "url": "https://github.com/Excel-Technologies-Ltd/Excel-HR.git",
             "branch": "master"
             },
             {

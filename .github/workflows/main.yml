@@ -38,10 +38,6 @@ jobs:
             "branch": "version-14"
             },
             {
-            "url": "https://gitlab.com/excel.azmin/whitelabel.git",
-            "branch": "main"
-            },
-            {
             "url": "https://gitlab.com/arcapps/excel_hr.git",
             "branch": "master"
             },

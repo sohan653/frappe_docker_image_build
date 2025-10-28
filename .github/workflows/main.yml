@@ -28,30 +28,43 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and Push Frappe Docker Image
         run: |
-          export APPS_JSON='[
+          APPS_JSON='[
             {
             "url": "https://github.com/frappe/erpnext",
-            "branch": "v14.83.4"
+            "branch": "version-14"
             },
             {
             "url": "https://github.com/frappe/hrms.git",
-            "branch": "v14.21.0"
+            "branch": "version-14"
             },
             {
             "url": "https://gitlab.com/excel.azmin/whitelabel.git",
             "branch": "main"
             },
             {
-            "url": "https://github.com/Excel-Technologies-Ltd/Adist.git",
-            "branch": "main"
+            "url": "https://gitlab.com/arcapps/excel_hr.git",
+            "branch": "master"
             },
             {
-            "url": "https://github.com/Excel-Technologies-Ltd/Fastrack.git",
-            "branch": "main"
+            "url": "https://gitlab.com/arcapps/excel_meeting_booking.git",
+            "branch": "master"
             }
-            
-          ]
-          '
+            ,
+            {
+            "url": "https://gitlab.com/arcapps/excel_attendance.git",
+            "branch": "ivms"
+            }
+            ,
+            {
+            "url": "https://gitlab.com/arcapps/excel_qr_code.git",
+            "branch": "master"
+            }
+            ,
+            {
+            "url": "https://gitlab.com/arcapps/excel-helpdesk.git",
+            "branch": "master"
+            }
+            ]'
 
           export APPS_JSON_BASE64=$(echo ${APPS_JSON} | base64 -w 0)
 

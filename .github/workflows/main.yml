@@ -38,10 +38,6 @@ jobs:
             "branch": "v14.21.0"
             },
             {
-                "url": "https://gitlab.com/excel.azmin/whitelabel.git",
-                "branch": "main"
-            },
-            {
                 "url": "https://gitlab.com/arcapps/frappe_survey.git",
                 "branch": "master"
             },

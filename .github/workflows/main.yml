@@ -31,25 +31,20 @@ jobs:
           export APPS_JSON='[
             {
             "url": "https://github.com/frappe/erpnext",
-            "branch": "v14.83.4"
+            "branch": "version-15"
             },
             {
             "url": "https://github.com/frappe/hrms.git",
-            "branch": "v14.21.0"
+            "branch": "version-15"
             },
             {
-            "url": "https://gitlab.com/excel.azmin/whitelabel.git",
-            "branch": "main"
+            "url": "https://github.com/E2Next-2/health-care-addon.git",
+            "branch": "enhancements-sohan"
             },
             {
-            "url": "https://github.com/Excel-Technologies-Ltd/Adist.git",
-            "branch": "main"
-            },
-            {
-            "url": "https://github.com/Excel-Technologies-Ltd/Fastrack.git",
-            "branch": "main"
+            "url": "https://github.com/earthians/marley.git",
+            "branch": "version-15"
             }
-            
           ]
           '
 
@@ -59,10 +54,10 @@ jobs:
           --no-cache \
           --platform linux/amd64 \
           --build-arg FRAPPE_PATH=https://github.com/frappe/frappe \
-          --build-arg FRAPPE_BRANCH=v14.95.0 \
+          --build-arg FRAPPE_BRANCH=version-15 \
           --build-arg PYTHON_VERSION=3.11.9 \
           --build-arg NODE_VERSION=18.20.2 \
           --build-arg APPS_JSON_BASE64="$APPS_JSON_BASE64" \
-          --tag arcapps/ftcl_adist:dev-test \
+          --tag arcapps/sohan:dev-test \
           --file images/custom/Containerfile \
           --push .

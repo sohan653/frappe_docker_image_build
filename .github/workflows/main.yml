@@ -38,10 +38,6 @@ jobs:
              "branch": "v14.36.8"
              },
              {
-             "url": "https://gitlab.com/excel.azmin/whitelabel.git",
-             "branch": "main"
-             },
-             {
              "url": "https://github.com/Excel-Technologies-Ltd/Adist.git",
              "branch": "main"
              },
